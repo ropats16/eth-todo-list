@@ -23,6 +23,7 @@
     "truffle-contract": "3.0.6"
   },
   "dependencies": {
-    "git-install": "^0.5.2"
+    "git-install": "^0.5.2",
+    "web3": "^0.20.6"
   }
 }

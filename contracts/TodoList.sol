@@ -32,6 +32,13 @@ contract TodoList {
 	//public creates a function to access task
 	//outside mapping
 
+	event TaskCreated(
+		//creates an event to broadcast when new task completed
+		uint id,
+		string content,
+		bool completed
+		);
+
 	constructor() public {
 		//constructor function called when contract runs 1st time
 		//in this case while deployment
@@ -59,6 +66,10 @@ contract TodoList {
 		//bool value is false to show task not completed
 		//stores it in tasks[taskCount]
 		//taskCount index serves as serial number
+
+		emit TaskCreated(taskCount, _content, false);
+		//this calls the event and broadcasts
+
 	}
 
 }
